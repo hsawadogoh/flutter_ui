@@ -5,6 +5,7 @@ import 'package:flutter_ui/screens/components/round_button.dart';
 import 'package:flutter_ui/screens/login/already_have_accoun.dart';
 import 'package:flutter_ui/screens/login/login_background.dart';
 import 'package:flutter_ui/screens/login/text_field_container.dart';
+import 'package:flutter_ui/screens/signup/signup_screen.dart';
 
 class LoginBody extends StatelessWidget {
   @override
@@ -59,7 +60,14 @@ class LoginBody extends StatelessWidget {
               ),
               SizedBox(height: size.height * 0.03,),
               AlreadyHaveAccount(
-                press: () {},
+                press: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return SignupScreen();
+                      })
+                  );
+                },
                 login: true,
               )
             ],

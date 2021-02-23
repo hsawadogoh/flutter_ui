@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/constants.dart';
 import 'package:flutter_ui/screens/components/round_button.dart';
 import 'package:flutter_ui/screens/login/login_screen.dart';
+import 'package:flutter_ui/screens/signup/signup_screen.dart';
 
 import 'background.dart';
 
@@ -41,7 +42,14 @@ class Body extends StatelessWidget {
                   text: 'S\'inscrire',
                   color: kPrimaryLightColor,
                   textColor: Colors.black,
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                        context,
+                      MaterialPageRoute(builder: (context) {
+                        return SignupScreen();
+                      })
+                    );
+                  },
                 ),
               ],
             )
