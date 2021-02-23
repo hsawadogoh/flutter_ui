@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/constants.dart';
 import 'package:flutter_ui/screens/components/round_button.dart';
+import 'package:flutter_ui/screens/login/already_have_accoun.dart';
 import 'package:flutter_ui/screens/login/login_background.dart';
 import 'package:flutter_ui/screens/login/text_field_container.dart';
 
@@ -21,11 +22,12 @@ class LoginBody extends StatelessWidget {
                     fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: size.height * 0.03,),
               SvgPicture.asset(
                 'assets/icons/login.svg',
                 height: size.height * 0.35,
               ),
+              SizedBox(height: size.height * 0.03,),
               TextFieldContainer(
                 child: TextField(
                   decoration: InputDecoration(
@@ -55,26 +57,10 @@ class LoginBody extends StatelessWidget {
                 text: 'Se connecter',
                 press: () {},
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Vous n\'avez pas de compte ?',
-                    style: TextStyle(
-                      color: kPrimaryColor
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      'S\'inscrire',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: kPrimaryColor
-                      ),
-                    ),
-                  )
-                ],
+              SizedBox(height: size.height * 0.03,),
+              AlreadyHaveAccount(
+                press: () {},
+                login: true,
               )
             ],
           ),
@@ -84,3 +70,4 @@ class LoginBody extends StatelessWidget {
   }
 
 }
+
