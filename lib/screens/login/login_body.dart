@@ -11,30 +11,31 @@ class LoginBody extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: LoginBackground(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Login to Flutter UI',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-            SizedBox(height: 10,),
-            SvgPicture.asset(
-              'assets/icons/login.svg',
-              height: size.height * 0.35,
-            ),
-            TextFieldContainer(
-              child: TextField(
-                decoration: InputDecoration(
-                  icon: Icon(Icons.person, color: kPrimaryColor,),
-                  hintText: 'Entrez votre email',
-                  border: InputBorder.none
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Login to Flutter UI',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold
                 ),
               ),
-            ),
-            TextFieldContainer(
+              SizedBox(height: 10,),
+              SvgPicture.asset(
+                'assets/icons/login.svg',
+                height: size.height * 0.35,
+              ),
+              TextFieldContainer(
+                child: TextField(
+                  decoration: InputDecoration(
+                      icon: Icon(Icons.person, color: kPrimaryColor,),
+                      hintText: 'Entrez votre email',
+                      border: InputBorder.none
+                  ),
+                ),
+              ),
+              TextFieldContainer(
                 child: Expanded(
                     child: TextField(
                       obscureText: true,
@@ -42,19 +43,41 @@ class LoginBody extends StatelessWidget {
                           icon: Icon(Icons.lock, color: kPrimaryColor,),
                           hintText: 'Entrez votre mot de passe',
                           border: InputBorder.none,
-                        suffixIcon: IconButton(
-                          onPressed: () {  },
-                          icon: Icon(Icons.remove_red_eye, color: kPrimaryColor,),
-                        )
+                          suffixIcon: IconButton(
+                            onPressed: () {  },
+                            icon: Icon(Icons.remove_red_eye, color: kPrimaryColor,),
+                          )
                       ),
                     )
                 ),
-            ),
-            RoundButton(
-              text: 'Se connecter',
-              press: () {},
-            )
-          ],
+              ),
+              RoundButton(
+                text: 'Se connecter',
+                press: () {},
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Vous n\'avez pas de compte ?',
+                    style: TextStyle(
+                      color: kPrimaryColor
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'S\'inscrire',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: kPrimaryColor
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
