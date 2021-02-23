@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui/constants.dart';
+import 'package:flutter_ui/screens/components/round_button.dart';
 import 'package:flutter_ui/screens/login/login_background.dart';
 import 'package:flutter_ui/screens/login/text_field_container.dart';
 
@@ -48,6 +49,10 @@ class LoginBody extends StatelessWidget {
                       ),
                     )
                 ),
+            ),
+            RoundButton(
+              text: 'Se connecter',
+              press: () {},
             )
           ],
         ),
