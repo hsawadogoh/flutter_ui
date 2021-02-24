@@ -39,19 +39,17 @@ class LoginBody extends StatelessWidget {
                 ),
               ),
               TextFieldContainer(
-                child: Expanded(
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          icon: Icon(Icons.lock, color: kPrimaryColor,),
-                          hintText: 'Entrez votre mot de passe',
-                          border: InputBorder.none,
-                          suffixIcon: IconButton(
-                            onPressed: () {  },
-                            icon: Icon(Icons.remove_red_eye, color: kPrimaryColor,),
-                          )
-                      ),
-                    )
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      icon: Icon(Icons.lock, color: kPrimaryColor,),
+                      hintText: 'Entrez votre mot de passe',
+                      border: InputBorder.none,
+                      suffixIcon: IconButton(
+                        onPressed: () {  },
+                        icon: Icon(Icons.remove_red_eye, color: kPrimaryColor,),
+                      )
+                  ),
                 ),
               ),
               RoundButton(
